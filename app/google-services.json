@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "7017632042",
+    "project_id": "video-meeting-e2d2a",
+    "storage_bucket": "video-meeting-e2d2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7017632042:android:39b086b496a25cfe150e53",
+        "android_client_info": {
+          "package_name": "com.example.videocallapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7017632042-tr10jshamga2jvdjea294308ajt5i2kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfo23ED0VMZx8S6IMRwhvHJ9bmQaiHQ7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7017632042-tr10jshamga2jvdjea294308ajt5i2kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
