@@ -23,15 +23,22 @@ import retrofit2.Response
 import java.net.URL
 
 class IncomingInvivationActivity : AppCompatActivity() {
+
+    private var meetingType: String ?= null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incoming_invivation)
 
-        val meetingType = intent.getStringExtra(Constants.REMOTE_MSG_MEETING_TYPE)
+        meetingType = intent.getStringExtra(Constants.REMOTE_MSG_MEETING_TYPE)
 
-        // Show video icon
+        // Show icon
         if (meetingType != null){
-            if (meetingType == "video"){ imageMeetingType.setImageResource(R.drawable.ic_video) }
+            if (meetingType == "video"){
+                imageMeetingType.setImageResource(R.drawable.ic_video)
+            }else{
+                imageMeetingType.setImageResource(R.drawable.ic_audio)
+            }
         }
 
         val firstName = intent.getStringExtra(Constants.KEY_FIRST_NAME)
@@ -82,12 +89,14 @@ class IncomingInvivationActivity : AppCompatActivity() {
                         try {
                             //Jitsi Meet connect
                             val serverURL = URL("https://meet.jit.si")
-                            val conferenceOption : JitsiMeetConferenceOptions = JitsiMeetConferenceOptions.Builder()
+                            val builder = JitsiMeetConferenceOptions.Builder()
                                 .setServerURL(serverURL)
                                 .setWelcomePageEnabled(false)
                                 .setRoom(intent.getStringExtra(Constants.REMOTE_MSG_MEETING_ROOM))
-                                .build()
-                            JitsiMeetActivity.launch(this@IncomingInvivationActivity,conferenceOption)
+                            if (meetingType == "audio"){
+                                builder.setVideoMuted(true)
+                            }
+                            JitsiMeetActivity.launch(this@IncomingInvivationActivity,builder.build())
                             finish()
                         }catch (e : Exception){
                             Toast.makeText(this@IncomingInvivationActivity, e.message, Toast.LENGTH_SHORT).show()

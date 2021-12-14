@@ -133,10 +133,14 @@ class MainActivity : AppCompatActivity(),  UsersListener{
 
     override fun initiateAudioMeeting(user: User) {
         if (user.token == "null" || user.token.trim().isEmpty()){
+            Log.d("bk","initiateAudioMeeting is empty")
             Toast.makeText(this, user.firstName+ " " + user.lastName + " is not available for meeting", Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(this, "Audio meeting with " + user.firstName + " " + user.lastName, Toast.LENGTH_SHORT).show()
-            Log.d("bk","user.token: " + user.token)
+            Log.d("bk","initiateAudioMeeting is not empty")
+            val intent = Intent(applicationContext,OutgoingInvitationActivity::class.java)
+            intent.putExtra("user",user)
+            intent.putExtra("type","audio")
+            startActivity(intent)
         }
     }
 

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/busra/Desktop/VideoCallApp-master/app/src/main/res/layout/activity_incoming_invivation.xml" value="0.1" />
+        <entry key="..\:/Users/busra/Desktop/VideoCallApp-master/app/src/main/res/layout/activity_outgoing_invitation.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/busra/Desktop/VideoCallApp-master/app/src/main/res/layout/item_container_user.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/busra/IntelliJIDEAProjects/VideoCall/VideoCallApp/app/src/main/res/drawable/background_accept_invitation.xml" value="0.2651282051282051" />
         <entry key="..\:/Users/busra/IntelliJIDEAProjects/VideoCall/VideoCallApp/app/src/main/res/drawable/background_meeting_invitation.xml" value="0.2651282051282051" />
         <entry key="..\:/Users/busra/IntelliJIDEAProjects/VideoCall/VideoCallApp/app/src/main/res/drawable/background_meeting_invitation_user_icon.xml" value="0.2651282051282051" />
